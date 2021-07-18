@@ -1,0 +1,3 @@
+﻿[OptionalProjects]
+"..\RelatedSetOptionalPackageCS\RelatedSetOptionalPackageCS.csproj"
+"..\RelatedSetOptionalPackageCPP\RelatedSetOptionalPackageCPP.vcxproj"

@@ -1,0 +1,9 @@
+namespace RelatedSetHostAppNativeHelper
+{
+    [default_interface]
+    runtimeclass NativeHelper
+    {
+        NativeHelper();
+        String LoadDll(String path);
+    }
+}

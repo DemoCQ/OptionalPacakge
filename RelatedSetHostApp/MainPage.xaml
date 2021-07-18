@@ -1,0 +1,21 @@
+﻿<Page x:Class="RelatedSetHostApp.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:RelatedSetHostApp"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Button Click="Check_Click" Content="Check OptionalPackages" />
+            <TextBox x:Name="tbInfo" TextWrapping="Wrap" />
+            <Button Click="LoadDll_Click" Content="Load DLL from CPP OptionalPackages" />
+            <TextBox x:Name="tbLoadDllInfo" TextWrapping="Wrap" />
+            <Button Click="LoadTxt_Click" Content="Load Sample Text from OptionalPackages" />
+            <TextBox x:Name="tbLoadTxtInfo" TextWrapping="Wrap" />
+            <StackPanel x:Name="panelImages" Orientation="Horizontal" />
+        </StackPanel>
+    </Grid>
+</Page>
