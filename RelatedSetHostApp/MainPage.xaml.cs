@@ -48,7 +48,8 @@ namespace RelatedSetHostApp
         private void LoadDll_Click(object sender, RoutedEventArgs e)
         {
             RelatedSetHostAppNativeHelper.NativeHelper helper = new RelatedSetHostAppNativeHelper.NativeHelper();
-            tbLoadDllInfo.Text = helper.LoadDll("RelatedSetOptionalPackageCPP.exe");
+            helper.LoadDll("RelatedSetOptionalPackageCPP.exe");
+            helper.AddPlugins(this.panelPlugin);
         }
 
         private async void LoadTxt_Click(object sender, RoutedEventArgs e)

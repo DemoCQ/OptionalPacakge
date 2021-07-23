@@ -1,0 +1,8 @@
+﻿namespace RelatedSetHostAppNativeHelper
+{
+    runtimeclass PluginWrapper
+    {
+        PluginWrapper();
+        Windows.Foundation.Collections.IVector<Windows.UI.Xaml.Controls.UserControl> Plugins();
+    }
+}

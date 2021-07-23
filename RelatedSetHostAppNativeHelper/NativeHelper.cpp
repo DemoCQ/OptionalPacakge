@@ -3,6 +3,8 @@
 #include "NativeHelper.g.cpp"
 #include <string>
 #include <sstream>
+#include <winrt/Windows.UI.Xaml.Controls.h>
+#include <winrt/Windows.Foundation.Collections.h>
 
 std::wstring GetMessage(HRESULT hr)
 {
@@ -25,9 +27,10 @@ std::wstring GetMessage(HRESULT hr)
     return msg;
 }
 
+typedef void (*Entry)(winrt::RelatedSetHostAppNativeHelper::IPluginWrapper pluginWrapper);
+
 namespace winrt::RelatedSetHostAppNativeHelper::implementation
 {
-    typedef int (*Entry)();
     hstring NativeHelper::LoadDll(hstring const& path)
     {
         auto handle = LoadPackagedLibrary(path.c_str(), 0);
@@ -40,8 +43,22 @@ namespace winrt::RelatedSetHostAppNativeHelper::implementation
         {
             return L"Can not find the proc address";
         }
+
+        entry(_pluginWrapper);
+
         std::wstringstream ss;
-        ss << L"Entry function result:" << entry() << std::endl;
+        ss << L"Entry function executed" << std::endl;
         return ss.str().c_str();
+    }
+
+    hstring NativeHelper::AddPlugins(winrt::Windows::UI::Xaml::Controls::StackPanel panel)
+    {
+        for (int i = 0; i < _pluginWrapper.Plugins().Size(); i++)
+        {
+            auto plugin = _pluginWrapper.Plugins().GetAt(i);
+            panel.Children().Append(plugin);
+        }
+
+        return L"";
     }
 }

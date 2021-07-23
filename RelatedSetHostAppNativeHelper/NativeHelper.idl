@@ -5,5 +5,6 @@ namespace RelatedSetHostAppNativeHelper
     {
         NativeHelper();
         String LoadDll(String path);
+        String AddPlugins(Windows.UI.Xaml.Controls.StackPanel panel);
     }
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "NativeHelper.g.h"
+#include "PluginWrapper.h"
 
 namespace winrt::RelatedSetHostAppNativeHelper::implementation
 {
@@ -8,6 +9,11 @@ namespace winrt::RelatedSetHostAppNativeHelper::implementation
         NativeHelper() = default;
 
         hstring LoadDll(hstring const& path);
+
+        hstring AddPlugins(winrt::Windows::UI::Xaml::Controls::StackPanel panel);
+
+    private:
+        winrt::RelatedSetHostAppNativeHelper::PluginWrapper _pluginWrapper;
     };
 }
 namespace winrt::RelatedSetHostAppNativeHelper::factory_implementation

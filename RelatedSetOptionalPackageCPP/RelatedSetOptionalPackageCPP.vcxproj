@@ -95,6 +95,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MyPluginControl.h">
+      <DependentUpon>MyPluginControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -121,6 +125,10 @@
     <Image Include="image.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyPluginControl.cpp">
+      <DependentUpon>MyPluginControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -134,6 +142,10 @@
     <Midl Include="App.idl">
       <DependentUpon>App.xaml</DependentUpon>
     </Midl>
+    <Midl Include="MyPluginControl.idl">
+      <DependentUpon>MyPluginControl.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -142,6 +154,16 @@
       <DeploymentContent>false</DeploymentContent>
     </Text>
     <Text Include="Sample.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MyPluginControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RelatedSetHostAppNativeHelper\RelatedSetHostAppNativeHelper.vcxproj">
+      <Project>{1df5a036-4c95-4648-8109-97410c503e39}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

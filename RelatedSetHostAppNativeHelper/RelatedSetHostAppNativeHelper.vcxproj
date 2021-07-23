@@ -96,6 +96,10 @@
       <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PluginWrapper.h">
+      <DependentUpon>PluginWrapper.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="NativeHelper.cpp">
@@ -106,9 +110,14 @@
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="PluginWrapper.cpp">
+      <DependentUpon>PluginWrapper.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="NativeHelper.idl" />
+    <Midl Include="PluginWrapper.idl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

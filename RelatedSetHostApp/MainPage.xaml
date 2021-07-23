@@ -11,11 +11,12 @@
         <StackPanel Orientation="Vertical">
             <Button Click="Check_Click" Content="Check OptionalPackages" />
             <TextBox x:Name="tbInfo" TextWrapping="Wrap" />
-            <Button Click="LoadDll_Click" Content="Load DLL from CPP OptionalPackages" />
-            <TextBox x:Name="tbLoadDllInfo" TextWrapping="Wrap" />
             <Button Click="LoadTxt_Click" Content="Load Sample Text from OptionalPackages" />
             <TextBox x:Name="tbLoadTxtInfo" TextWrapping="Wrap" />
             <StackPanel x:Name="panelImages" Orientation="Horizontal" />
+
+            <Button Click="LoadDll_Click" Content="Load DLL from CPP OptionalPackages" />
+            <StackPanel x:Name="panelPlugin" Orientation="Horizontal"></StackPanel>
         </StackPanel>
     </Grid>
 </Page>
