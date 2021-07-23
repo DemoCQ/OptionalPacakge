@@ -8,7 +8,7 @@
 
   <Identity
     Name="RelatedSetHostApp"
-    Publisher="CN=cjw11"
+    Publisher="CN=cq"
     Version="1.0.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="cf11686e-65f6-449e-a56f-93c095ff399f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>

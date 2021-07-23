@@ -9,7 +9,7 @@
 
   <Identity
     Name="RelatedSetOptionalPackageCPP"
-    Publisher="CN=cjw11"
+    Publisher="CN=cq"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="95501184-7382-4b81-890f-3816f24d9fb3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
