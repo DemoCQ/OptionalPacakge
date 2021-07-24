@@ -8,6 +8,7 @@ extern "C" {
 		// Since the Import Address Table is not correctly configured, which means that all calls to imported functions will crash.
 		// So we can put resouces file in the project RelatedSetOptionalPackageCPP, but for any code we used, we should be better put it into RelatedSetOptionalPackageCppDll.
 		// Then we can load RelatedSetOptionalPackageCppDll.dll to use all of our custom user control and code.
+		// Here is page for reference:https://www.codeproject.com/Articles/1045674/Load-EXE-as-DLL-Mission-Possible
 		assert(false);
 	}
 }
