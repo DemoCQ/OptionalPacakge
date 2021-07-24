@@ -27,7 +27,7 @@ std::wstring GetMessage(HRESULT hr)
     return msg;
 }
 
-typedef void (*Entry)(winrt::RelatedSetHostAppNativeHelper::IPluginWrapper pluginWrapper);
+typedef void (*Entry)(winrt::RelatedSetCommon::IPluginWrapper pluginWrapper);
 
 namespace winrt::RelatedSetHostAppNativeHelper::implementation
 {

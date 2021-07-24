@@ -12,20 +12,20 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="NativeHelper.cpp" />
+    <ClCompile Include="PluginWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="NativeHelper.h" />
+    <ClInclude Include="PluginWrapper.h" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="NativeHelper.idl" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="RelatedSetHostAppNativeHelper.def" />
+    <None Include="RelatedSetCommon.def" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PropertySheet.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="PluginWrapper.idl" />
   </ItemGroup>
 </Project>

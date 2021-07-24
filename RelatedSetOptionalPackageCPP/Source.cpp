@@ -1,11 +1,16 @@
 #include "pch.h"
-#include <winrt/RelatedSetHostAppNativeHelper.h>
-#include "winrt/RelatedSetOptionalPackageCPP.h"
+#include "MyPluginControl.h"
+#include <winrt/RelatedSetCommon.h>
+#include <winrt/RelatedSetOptionalPackageCppDll.h>
+
 extern "C" {
-	__declspec(dllexport) void Entry(winrt::RelatedSetHostAppNativeHelper::IPluginWrapper pluginWrapper)
+	__declspec(dllexport) void Entry(winrt::RelatedSetCommon::IPluginWrapper pluginWrapper)
 	{
-		winrt::RelatedSetOptionalPackageCPP::XamlMetaDataProvider provider;
-		auto plugin = provider.GetXamlType(winrt::xaml_typename< winrt::RelatedSetOptionalPackageCPP::MyPluginControl>()).ActivateInstance();
-		pluginWrapper.Plugins().Append(plugin.as<winrt::Windows::UI::Xaml::Controls::UserControl>());
+		// Create TestControl of RelatedSetOptionalPackageCppDll in RelatedSetOptionalPackageCpp.exe module will throw exceptions.
+		// TODO: Find the reason
+		assert(false);
+		winrt::RelatedSetOptionalPackageCppDll::TestControl control{ nullptr };
+		control = winrt::RelatedSetOptionalPackageCppDll::TestControl();
+		pluginWrapper.Plugins().Append(control);
 	}
 }

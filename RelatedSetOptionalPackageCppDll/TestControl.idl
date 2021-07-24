@@ -1,0 +1,8 @@
+namespace RelatedSetOptionalPackageCppDll
+{
+    [default_interface]
+    runtimeclass TestControl : Windows.UI.Xaml.Controls.UserControl
+    {
+        TestControl();
+    }
+}

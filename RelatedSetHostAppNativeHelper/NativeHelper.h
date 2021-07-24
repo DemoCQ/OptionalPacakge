@@ -1,6 +1,6 @@
 #pragma once
 #include "NativeHelper.g.h"
-#include "PluginWrapper.h"
+#include "winrt/RelatedSetCommon.h"
 
 namespace winrt::RelatedSetHostAppNativeHelper::implementation
 {
@@ -13,7 +13,7 @@ namespace winrt::RelatedSetHostAppNativeHelper::implementation
         hstring AddPlugins(winrt::Windows::UI::Xaml::Controls::StackPanel panel);
 
     private:
-        winrt::RelatedSetHostAppNativeHelper::PluginWrapper _pluginWrapper;
+        winrt::RelatedSetCommon::PluginWrapper _pluginWrapper;
     };
 }
 namespace winrt::RelatedSetHostAppNativeHelper::factory_implementation

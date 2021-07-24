@@ -1,7 +1,7 @@
 #pragma once
 #include "PluginWrapper.g.h"
 
-namespace winrt::RelatedSetHostAppNativeHelper::implementation
+namespace winrt::RelatedSetCommon::implementation
 {
     struct PluginWrapper : PluginWrapperT<PluginWrapper>
     {
@@ -13,7 +13,7 @@ namespace winrt::RelatedSetHostAppNativeHelper::implementation
         winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Xaml::Controls::UserControl> _plugins{ winrt::single_threaded_vector<winrt::Windows::UI::Xaml::Controls::UserControl>() };
     };
 }
-namespace winrt::RelatedSetHostAppNativeHelper::factory_implementation
+namespace winrt::RelatedSetCommon::factory_implementation
 {
     struct PluginWrapper : PluginWrapperT<PluginWrapper, implementation::PluginWrapper>
     {

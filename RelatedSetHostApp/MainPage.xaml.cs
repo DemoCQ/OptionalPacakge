@@ -45,13 +45,6 @@ namespace RelatedSetHostApp
             tbInfo.Text = sb.Length == 0 ? "No OptionalPackages" : sb.ToString();
         }
 
-        private void LoadDll_Click(object sender, RoutedEventArgs e)
-        {
-            RelatedSetHostAppNativeHelper.NativeHelper helper = new RelatedSetHostAppNativeHelper.NativeHelper();
-            helper.LoadDll("RelatedSetOptionalPackageCPP.exe");
-            helper.AddPlugins(this.panelPlugin);
-        }
-
         private async void LoadTxt_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder sb = new StringBuilder();
@@ -88,6 +81,14 @@ namespace RelatedSetHostApp
             Image image = new Image();
             image.Source = bitmapImage;
             panelImages.Children.Add(image);
+        }
+
+        private void LoadDll_Click(object sender, RoutedEventArgs e)
+        {
+            RelatedSetHostAppNativeHelper.NativeHelper helper = new RelatedSetHostAppNativeHelper.NativeHelper();
+            helper.LoadDll("RelatedSetOptionalPackageCPPDll.dll");
+            //helper.LoadDll("RelatedSetOptionalPackageCPP.exe");  // will failed since Access vialation
+            helper.AddPlugins(this.panelPlugin);
         }
     }
 }
