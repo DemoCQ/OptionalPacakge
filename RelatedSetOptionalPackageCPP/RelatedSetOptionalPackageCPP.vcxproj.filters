@@ -54,7 +54,4 @@
   <ItemGroup>
     <Text Include="Sample.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Page Include="MyPluginControl.xaml" />
-  </ItemGroup>
 </Project>

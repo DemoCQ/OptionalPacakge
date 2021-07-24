@@ -1,8 +1,0 @@
-namespace RelatedSetOptionalPackageCPP
-{
-    [default_interface]
-    runtimeclass MyPluginControl : Windows.UI.Xaml.Controls.UserControl
-    {
-        MyPluginControl();
-    }
-}

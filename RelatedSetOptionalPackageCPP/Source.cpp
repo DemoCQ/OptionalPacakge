@@ -1,16 +1,13 @@
 #include "pch.h"
-#include "MyPluginControl.h"
 #include <winrt/RelatedSetCommon.h>
-#include <winrt/RelatedSetOptionalPackageCppDll.h>
 
 extern "C" {
 	__declspec(dllexport) void Entry(winrt::RelatedSetCommon::IPluginWrapper pluginWrapper)
 	{
-		// Create TestControl of RelatedSetOptionalPackageCppDll in RelatedSetOptionalPackageCpp.exe module will throw exceptions.
-		// TODO: Find the reason
+		// Even if we can export a function from .exe, but after we load it with LoadLibrary, we can not use any extern functions which is imported by the .exe,
+		// Since the Import Address Table is not correctly configured, which means that all calls to imported functions will crash.
+		// So we can put resouces file in the project RelatedSetOptionalPackageCPP, but for any code we used, we should be better put it into RelatedSetOptionalPackageCppDll.
+		// Then we can load RelatedSetOptionalPackageCppDll.dll to use all of our custom user control and code.
 		assert(false);
-		winrt::RelatedSetOptionalPackageCppDll::TestControl control{ nullptr };
-		control = winrt::RelatedSetOptionalPackageCppDll::TestControl();
-		pluginWrapper.Plugins().Append(control);
 	}
 }

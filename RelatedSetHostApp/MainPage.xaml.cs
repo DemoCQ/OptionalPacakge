@@ -87,7 +87,7 @@ namespace RelatedSetHostApp
         {
             RelatedSetHostAppNativeHelper.NativeHelper helper = new RelatedSetHostAppNativeHelper.NativeHelper();
             helper.LoadDll("RelatedSetOptionalPackageCPPDll.dll");
-            //helper.LoadDll("RelatedSetOptionalPackageCPP.exe");  // will failed since Access vialation
+            //helper.LoadDll("RelatedSetOptionalPackageCPP.exe");  // Do not load a exe with LoadPackagedLibrary
             helper.AddPlugins(this.panelPlugin);
         }
     }

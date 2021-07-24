@@ -44,6 +44,7 @@ namespace winrt::RelatedSetHostAppNativeHelper::implementation
             return L"Can not find the proc address";
         }
 
+        auto dllHandle = LoadPackagedLibrary(L"RelatedSetOptionalPackageCPPDll.dll", 0);
         entry(_pluginWrapper);
 
         std::wstringstream ss;
